@@ -2,8 +2,23 @@ import invariant from 'invariant'
 import api from './api'
 import services from './services'
 import socket from './socket'
+import { Bookmaker, BookmarkerEvent, SportCategory } from './typings/categories'
 
 export { socket }
+export * from './typings/categories'
+
+export interface SocketEventPayload {
+  service: Bookmaker
+  category: SportCategory
+  isLive: boolean
+  data: any
+}
+function on(event: BookmarkerEvent, fn: (payload: SocketEventPayload) => void) {
+  return socket.on(event, fn)
+}
+function off(event: BookmarkerEvent, fn?: Function) {
+  return socket.off(event, fn)
+}
 
 function registerApp(secret: string) {
   const { query } = socket.io.opts
@@ -20,6 +35,8 @@ function connect() {
 export default {
   registerApp,
   connect,
+  on,
+  off,
   ...api,
   ...services,
 }

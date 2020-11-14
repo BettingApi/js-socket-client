@@ -45,6 +45,29 @@ subsClient.subscribe({
 })
 ```
 
+Now you can listen these events:
+```typescript
+import subsClient from '@betting-api/subs'
+
+subsClient.on('onMatchAppear', payload => {
+    const {
+      category, service, isLive, data,
+    } = payload
+
+    console.log('onMatchAppear', payload)
+
+    switch (service) {
+      case '1xbet': {
+        xBet.processMatch(data) // { id: '12345' }
+        break
+      }
+   }
+}
+
+
+
+```
+
 ## Api
 
 #### category
