@@ -5,7 +5,7 @@ import socket from './socket'
 import { Bookmaker, BookmarkerEvent, SportCategory } from './typings/categories'
 
 export { socket }
-export * from './typings/categories'
+export { Bookmaker, BookmarkerEvent, SportCategory }
 
 export interface SocketEventPayload {
   service: Bookmaker
