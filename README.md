@@ -94,3 +94,26 @@ subsClient.on('onMatchAppear', payload => {
 #### isLive
 - `true` - receive only live events
 - `false` - receive only prematch events
+
+
+## Socket Connection Listener
+
+```typescript
+import { socket } from '@betting-api/subs'
+
+socket.on('connect', () => {
+  console.log('socket is opened')
+})
+
+socket.on('disconnect', () => {
+  console.log('socket is closed ')
+})
+
+socket.on('reconnect_attempt', () => {
+  console.log('socket reconnect_attempt')
+})
+
+socket.on('error', e => {
+  console.log('socket error', e)
+})
+```

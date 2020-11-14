@@ -1,3 +1,3 @@
 export default {
-  socketUri: 'http://localhost:10001',
+  socketUri: 'https://api.betting-api.com',
 }
