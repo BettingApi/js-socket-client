@@ -1,6 +1,6 @@
 Service provides way to subscribe on realtime betting events.
 
-![](https://img.shields.io/npm/v/@betting-api/subs)
+[![npm](https://img.shields.io/npm/v/@betting-api/subs)](https://www.npmjs.com/package/@betting-api/subs)
 
 ## Getting Started
 
