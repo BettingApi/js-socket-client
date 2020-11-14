@@ -1,5 +1,7 @@
 Service provides way to subscribe on realtime betting events.
 
+![](https://img.shields.io/npm/v/@betting-api/subs)
+
 ## Getting Started
 
 Install Package: `yarn add @betting-api/subs`
