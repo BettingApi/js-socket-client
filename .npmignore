@@ -1,0 +1,7 @@
+**/*.ts
+!**/*.d.ts
+**/tests
+**/test
+.babelrc
+.mocharc.yml
+tsconfig.json
