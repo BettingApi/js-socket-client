@@ -1,3 +1,4 @@
+Service provides way to subscribe on realtime betting events.
 
 ## Getting Started
 
